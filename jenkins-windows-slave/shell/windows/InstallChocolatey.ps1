@@ -16,5 +16,8 @@ choco install jdk8 -y
 #--- Curl ---
 choco install curl -y
 
+#--- Chrome ---
+choco install googlechrome -y
+
 #--- Restore Temporary Settings ---
 Enable-UAC
