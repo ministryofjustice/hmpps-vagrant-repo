@@ -22,5 +22,10 @@ choco install curl -y
 #--- Chrome ---
 choco install googlechrome -y
 
+#--- Create jenkins dir
+New-Item -Path c:\jenkins\workspace -ItemType directory
+
+powershell -command "& { iwr https://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/3.14/swarm-client-3.14.jar -OutFile c:\jenkins\swarm-client.jar }"
+
 #--- Restore Temporary Settings ---
 Enable-UAC
