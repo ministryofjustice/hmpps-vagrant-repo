@@ -6,7 +6,7 @@ echo *****************Executing main script ****************
 
 refreshenv
 
-echo *** Installing ansible ***
-pip install ansible
+REM echo *** Installing ansible ***
+REM pip install ansible
 
 echo "*****************WINDOWS VM PREP COMPLETE****************"

@@ -10,5 +10,8 @@ Disable-UAC
 #--- Python ---
 choco install python2 -y
 
+#--- Python ---
+choco install jdk8 -y
+
 #--- Restore Temporary Settings ---
 Enable-UAC
