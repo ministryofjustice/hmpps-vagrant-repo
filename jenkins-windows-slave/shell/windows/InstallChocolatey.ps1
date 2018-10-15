@@ -16,8 +16,8 @@ choco install awscli -y
 #--- JDK ---
 choco install jdk8 -y
 
-#--- Curl ---
-choco install curl -y
+#--- wget ---
+choco install wget -y
 
 #--- Chrome ---
 choco install googlechrome -y
@@ -25,7 +25,8 @@ choco install googlechrome -y
 #--- Create jenkins dir
 New-Item -Path c:\jenkins\workspace -ItemType directory
 
-curl -o c:\jenkins\swarm-client.jar -L https://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/3.14/swarm-client-3.14.jar
+[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12;
+wget -OutFile c:\jenkins\swarm-client.jar https://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/3.14/swarm-client-3.14.jar
 
 #--- Restore Temporary Settings ---
 Enable-UAC
