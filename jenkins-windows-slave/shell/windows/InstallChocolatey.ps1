@@ -8,7 +8,7 @@ if (!(Test-Path $ChocoInstallPath)) {
 Disable-UAC
 
 #--- Python ---
-choco install python2 -y
+choco install awscli -y
 
 #--- JDK ---
 choco install jdk8 -y
