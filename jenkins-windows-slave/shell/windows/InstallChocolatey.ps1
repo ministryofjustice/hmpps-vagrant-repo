@@ -25,7 +25,11 @@ choco install googlechrome -y
 #--- Create jenkins dir
 New-Item -Path c:\jenkins\workspace -ItemType directory
 
-powershell -command "& { iwr https://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/3.14/swarm-client-3.14.jar -OutFile c:\jenkins\swarm-client.jar }"
+$url = "https://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/3.14/swarm-client-3.14.jar"
+$output = "c:\jenkins\swarm-client.jar "
+
+Import-Module BitsTransfer
+Start-BitsTransfer -Source $url -Destination $output
 
 #--- Restore Temporary Settings ---
 Enable-UAC
