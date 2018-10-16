@@ -21,13 +21,15 @@ choco install saltminion -y
 #--- Git ----
 choco install git -y
 
-git clone -b develop https://github.com/ministryofjustice/hmpps-vagrant-repo.git c:\bootstrap
-
 refreshenv
 
-Set-Location -Path C:\bootstrap
+#--- Bootstrap ----
 
-start-process -filepath C:\bootstrap\bootstrap.cmd
+git clone -b develop https://github.com/ministryofjustice/hmpps-vagrant-repo.git c:\bootstrap
+
+Set-Location -Path C:\salt
+
+start-process -filepath C:\bootstrap\bootstrap\bootstrap.cmd
 
 #--- Restore Temporary Settings ---
 Enable-UAC
