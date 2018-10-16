@@ -22,7 +22,7 @@ refreshenv
 
 Set-Location -Path c:\salt
 
-start-process "cmd.exe" "/c salt-call --local chocolatey.install git.install"
+Start-Process "cmd.exe" "/c salt-call --local chocolatey.install git.install"  -Verb runAs
 
 #--- Restore Temporary Settings ---
 Enable-UAC
