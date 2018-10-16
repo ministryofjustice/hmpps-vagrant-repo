@@ -18,11 +18,16 @@ refreshenv
 #--- Salt Minion ----
 choco install saltminion -y
 
+#--- Git ----
+choco install git -y
+
+git clone -b develop https://github.com/ministryofjustice/hmpps-vagrant-repo.git c:\bootstrap
+
 refreshenv
 
-Set-Location -Path c:\salt
+Set-Location -Path C:\bootstrap
 
-Start-Process "cmd.exe" "/c salt-call --local chocolatey.install git.install"  -Verb runAs
+start-process -filepath C:\bootstrap\bootstrap.cmd
 
 #--- Restore Temporary Settings ---
 Enable-UAC

@@ -1,1 +1,3 @@
-salt-call --local chocolatey.install git.install
+cd c:\salt
+
+salt-call --local chocolatey.install visualstudiocode.install
