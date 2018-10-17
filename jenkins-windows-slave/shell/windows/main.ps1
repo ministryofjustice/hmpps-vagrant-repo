@@ -27,7 +27,7 @@ refreshenv
 
 Set-Location -Path C:\salt
 
-start-process -filepath C:\vagrant\shell\windows\bootstrap.cmd -Verb RunAs
+start-process -filepath C:\vagrant\shell\windows\bootstrap.cmd
 
 #--- Restore Temporary Settings ---
 Enable-UAC
