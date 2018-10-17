@@ -9,6 +9,9 @@ yum install -y salt-master salt-minion git
 systemctl enable salt-master salt-minion
 systemctl start salt-master salt-minion
 
+echo 'auto_accept: True' > /etc/salt/master.d/master.conf
+systemctl restart salt-master
+
 yum install -y epel-release
 
 yum install python-pygit2 -y
