@@ -25,11 +25,9 @@ refreshenv
 
 #--- Bootstrap ----
 
-git clone -b develop https://github.com/ministryofjustice/hmpps-vagrant-repo.git c:\bootstrap
-
 Set-Location -Path C:\salt
 
-start-process -filepath C:\bootstrap\bootstrap\bootstrap.cmd
+start-process -filepath C:\bootstrap\bootstrap\bootstrap.cmd -Verb RunAs
 
 #--- Restore Temporary Settings ---
 Enable-UAC
