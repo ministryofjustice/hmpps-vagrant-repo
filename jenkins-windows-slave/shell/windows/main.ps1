@@ -23,11 +23,11 @@ choco install git -y
 
 refreshenv
 
-#--- Bootstrap ----
+# #--- Bootstrap ----
 
-Set-Location -Path C:\salt
+# Set-Location -Path C:\salt
 
-start-process -filepath C:\vagrant\shell\windows\bootstrap.cmd
+# start-process -filepath C:\vagrant\shell\windows\bootstrap.cmd
 
 #--- Restore Temporary Settings ---
 Enable-UAC

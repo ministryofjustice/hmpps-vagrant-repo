@@ -1,6 +1,7 @@
 Vagrant.configure("2") do |config|
   config.vm.define "windows" do |windows|
     windows.vm.provision :shell, path: "shell/windows/main.cmd"
+    windows.vm.provision :shell, path: "shell/windows/bootstrap.cmd"
     windows.vm.box = "mwrock/Windows2012R2"
     windows.vm.network "private_network", ip: "172.26.243.10"
     windows.vm.provider :virtualbox do |vb|
