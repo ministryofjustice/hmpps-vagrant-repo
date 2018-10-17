@@ -27,8 +27,10 @@ choco install git -y
 refreshenv
 
 Add-Content -Path C:\salt\conf\minion.d\minion.conf -Value "grains:"
-Add-Content -Path C:\salt\conf\minion.d\minion.conf -Value "  roles:"
-Add-Content -Path C:\salt\conf\minion.d\minion.conf -Value "    - misprofile1"
+Add-Content -Path C:\salt\conf\minion.d\minion.conf -Value "  app: mis"
+Add-Content -Path C:\salt\conf\minion.d\minion.conf -Value "  role: db"
+Add-Content -Path C:\salt\conf\minion.d\minion.conf -Value "  environment: dev"
+
 
 # #--- Bootstrap ----
 
