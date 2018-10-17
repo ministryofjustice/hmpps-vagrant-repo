@@ -4,6 +4,9 @@ if (!(Test-Path $ChocoInstallPath)) {
     iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
 }
 
+# Host entry
+Add-Content -Path C:\Windows\System32\Drivers\etc\hosts -Value "172.26.243.12 salt"
+
 #---- TEMPORARY ---
 Disable-UAC
 
