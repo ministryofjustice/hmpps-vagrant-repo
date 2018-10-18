@@ -11,7 +11,7 @@ Add-Content -Path C:\Windows\System32\Drivers\etc\hosts -Value "172.26.243.12 sa
 Disable-UAC
 
 #--- Python ---
-choco install python2 -y
+choco install python -y
 
 #--- awscli ---
 choco install awscli -y
