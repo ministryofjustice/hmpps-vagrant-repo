@@ -24,15 +24,11 @@ choco install saltminion -y
 #--- Git ----
 choco install git -y
 
+#--- jdk ----
+choco install jdk8 -y
+
 refreshenv
 
-# #--- Bootstrap ----
-
-# Set-Location -Path C:\salt
-
-# start-process -filepath C:\vagrant\shell\windows\bootstrap.cmd
-
-#--- Restore Temporary Settings ---
 Enable-UAC
 
 # java -jar c:\jenkins\swarm-client.jar -master http://10.168.253.54:8080 -username admin -password admin -name jenkins-swarm-windows-slave-1

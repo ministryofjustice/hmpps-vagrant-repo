@@ -12,6 +12,6 @@ net stop salt-minion
 
 net start salt-minion
 
-salt-call --local state.highstate
+salt-call state.highstate
 
 echo "salt bootstrap end"
