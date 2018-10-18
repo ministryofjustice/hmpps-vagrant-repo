@@ -10,6 +10,10 @@ git clone -b issue-1 https://github.com/ministryofjustice/hmpps-mis-saltstack-st
 
 copy c:\salt\states\bootstrap\fileroots.conf C:\salt\conf\minion.d\fileroots.conf
 
+net stop salt-minion
+
+net start salt-minion
+
 salt-call --local state.highstate
 
 echo "salt bootstrap end"
