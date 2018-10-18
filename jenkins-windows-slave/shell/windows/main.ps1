@@ -27,8 +27,10 @@ choco install git -y
 #--- jdk ----
 choco install jdk8 -y
 
+#--- Visual C++ ----
+
+choco install vcredist-all -y
+
 refreshenv
 
 Enable-UAC
-
-# java -jar c:\jenkins\swarm-client.jar -master http://10.168.253.54:8080 -username admin -password admin -name jenkins-swarm-windows-slave-1
