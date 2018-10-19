@@ -27,13 +27,12 @@ ext_pillar:
     - develop https://github.com/ministryofjustice/hmpps-mis-saltstack-pillars.git
 ' > /etc/salt/master.d/master.conf
 
-systemctl restart salt-master
-
 yum install -y epel-release
 
 yum install python-pygit2 -y
 
-salt-run winrepo.genrepo
+systemctl restart salt-master
+
 salt-run winrepo.update_git_repos
 
 # salt -G 'os:Windows' pkg.refresh_db

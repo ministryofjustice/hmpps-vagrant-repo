@@ -12,6 +12,8 @@ net stop salt-minion
 
 net start salt-minion
 
+salt-call pkg.refresh_db
+
 salt-call state.highstate
 
 echo "salt bootstrap end"
