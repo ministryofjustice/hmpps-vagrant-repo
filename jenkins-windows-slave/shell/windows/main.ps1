@@ -29,7 +29,7 @@ choco install jdk8 -y
 
 #--- Visual C++ ----
 
-choco install vcredist-all -y
+choco install vcredist2012 -y
 
 refreshenv
 
