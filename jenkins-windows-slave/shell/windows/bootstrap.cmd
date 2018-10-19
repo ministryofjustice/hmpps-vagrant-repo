@@ -1,5 +1,9 @@
 echo "salt bootstrap start"
 
+c:\tmp\salt-minion.exe /S /master=salt
+
+timeout /t 30 /nobreak
+
 rmdir /s /q c:\salt\states
 
 git clone -b issue-1 https://github.com/ministryofjustice/hmpps-mis-saltstack-states.git c:\salt\states
