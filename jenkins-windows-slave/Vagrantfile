@@ -23,7 +23,6 @@ Vagrant.configure("2") do |config|
     end
   end
   config.vm.define "saltmaster" do |saltmaster|
-    saltmaster.vm.synced_folder "data/", "/data", type: "nfs"
     saltmaster.vm.box = "bento/centos-7.4"
     saltmaster.vm.network "private_network", ip: "172.26.243.12"
     saltmaster.vm.hostname = "saltmaster"

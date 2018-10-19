@@ -2,10 +2,6 @@
 
 echo '### SALTMASTER SETUP'
 
-mkdir /data/salt
-
-ln -sf /data/salt /srv/salt
-
 yum install https://repo.saltstack.com/yum/redhat/salt-repo-latest-2.el7.noarch.rpm -y
 
 yum install -y salt-master salt-minion git
